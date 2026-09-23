@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     const pokeButton = document.getElementById("poke-button");
-    const pokeSoundButton = document.getElementById("poke-Sound");
+    
     const pokemonInput = document.getElementById("pokemon");
 
-    let pokemonAudio = "";
+   
 
     pokeButton.addEventListener("click", async function () {
 
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             let resposta = await fetch(
-                `https://pokeapi.co/api/v2/pokemon/${pokeInputText.toLowerCase()}/`
+                `https://pokeapi.co/api/v2/pokemon/${pokeInputText}/`
             );
 
             if (!resposta.ok) {
@@ -26,8 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             let dados = await resposta.json();
-
-            pokemonAudio = dados.cries.latest;
 
             let pokeImage = document.getElementById("poke-img");
 
@@ -72,22 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    pokeSoundButton.addEventListener("click", function () {
-
-        if (pokemonAudio) {
-
-            let audio = new Audio(pokemonAudio);
-
-            audio.play().catch(function (error) {
-                console.log("Erro ao tocar o áudio:", error);
-            });
-
-        } else {
-
-            alert("Nenhum Pokémon carregado para reproduzir o som.");
-
-        }
-
-    });
+   
 
 });

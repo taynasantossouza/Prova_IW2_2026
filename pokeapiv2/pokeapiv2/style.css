@@ -126,15 +126,11 @@ section h5 {
 }
 
 .poke-top.open {
-    transform: translateY(-80px);
+    transform: translateY(-20px);
 }
 
 .poke-bottom.open {
-    transform: translateY(80px);
-}
-
-#poke-img.open {
-    transform: translateY(-40px);
+    transform: translateY(20px);
 }
 
 .poke-info {
@@ -167,18 +163,5 @@ section h5 {
     padding-top: 8px;
 }
 
-#poke-Sound {
-    margin-top: 15px;
-    padding: 10px 18px;
-    border: none;
-    border-radius: 20px;
-    background: #222;
-    color: white;
-    cursor: pointer;
-    font-size: 15px;
-    transition: transform 0.2s ease;
-}
 
-#poke-Sound:hover {
-    transform: scale(1.05);
-}
+
