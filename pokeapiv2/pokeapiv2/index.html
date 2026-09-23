@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Pokemon</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <section>
+        <div class="conteudo">
+
+            <h4>API Pokemon:</h4>
+
+            <div class="pesquisa">
+                <label for="pokemon">Nome ou ID do Pokemon</label>
+                <input id="pokemon" type="text">
+                <button id="poke-button">Buscar</button>
+            </div>
+
+            <h5>Pokemon:</h5>
+
+            <div class="poke-img-container">
+
+                <div class="poke-top"></div>
+
+                <div class="poke-bottom"></div>
+
+                <img id="poke-img" alt="">
+
+            </div>
+
+            <div class="poke-info">
+                <p id="poke-name">Nome:</p>
+                <p id="poke-id">ID:</p>
+                <p id="poke-height">Altura:</p>
+                <p id="poke-weight">Peso:</p>
+                <p id="poke-type">Tipo:</p>
+            </div>
+
+            <button id="poke-Sound">🔊 Ouvir Pokémon</button>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
